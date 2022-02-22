@@ -29,5 +29,8 @@ Route::get('getCourse/{id}', function ($id) {
     return response()->json($course);
 });
 
-Route::get('/students',[StudentController::class,'index']);
+Route::get('/students',[StudentController::class,'index'])->name('student.show');
 Route::post('/add-student',[StudentController::class,'addStudent'])->name('student.add');
+Route::get('/students/{id}',[StudentController::class,"getStudentById"]);
+Route::post('/updateStudents',[StudentController::class,'updateStudent'])->name('student.update');
+Route::post('/students/{id}',[StudentController::class,'deleteStudent']);

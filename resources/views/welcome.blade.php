@@ -10,8 +10,9 @@
     </head>
     <body>
         <div class="container my-5">
-            <h1 class="fs-5 fw-bold my-4 text-center">How to Create Dependent Dropdown in Laravel</h1>
+            <h1 class="fs-5 fw-bold my-4 text-center">Dependent Dropdown in Laravel</h1>
             <div class="row">
+                <a href="{{route('student.show')}}" class="fs-5 fw-bold my-4 text-center">Students</a>
                 <form action="">
                     <div class="mb-3">
                         <label for="category" class="form-label">Category</label>
