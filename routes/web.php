@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,6 @@ Route::get('getCourse/{id}', function ($id) {
     $course = App\Models\Course::where('category_id',$id)->get();
     return response()->json($course);
 });
+
+Route::get('/students',[StudentController::class,'index']);
+Route::post('/add-student',[StudentController::class,'addStudent'])->name('student.add');
